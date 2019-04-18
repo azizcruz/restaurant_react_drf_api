@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomLayout component it matches the snapshot 1`] = `
+<section
+  className="layout ant-layout"
+>
+  <header
+    className="ant-layout-header"
+  >
+    <h1
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+    >
+      Restaurant Menu
+    </h1>
+  </header>
+  <main
+    className="ant-layout-content"
+    style={
+      Object {
+        "padding": "0 50px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "minHeight": "84vh",
+          "padding": "24px 0",
+        }
+      }
+    />
+  </main>
+  <footer
+    className="ant-layout-footer"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Abdelaziz Abdelioua
+  </footer>
+</section>
+`;
+
+exports[`DataTable component it matches the snapshot 1`] = `
+<section
+  className="layout ant-layout"
+>
+  <header
+    className="ant-layout-header"
+  >
+    <h1
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+    >
+      Restaurant Menu
+    </h1>
+  </header>
+  <main
+    className="ant-layout-content"
+    style={
+      Object {
+        "padding": "0 50px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "minHeight": "84vh",
+          "padding": "24px 0",
+        }
+      }
+    />
+  </main>
+  <footer
+    className="ant-layout-footer"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Abdelaziz Abdelioua
+  </footer>
+</section>
+`;

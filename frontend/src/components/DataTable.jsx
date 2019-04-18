@@ -15,9 +15,8 @@ class DataTable extends Component {
   };
 
   render() {
-    let { sortedInfo, filteredInfo } = this.state;
+    let { sortedInfo } = this.state;
     sortedInfo = sortedInfo || {};
-    filteredInfo = filteredInfo || {};
     const columns = [
       {
         title: "Name",

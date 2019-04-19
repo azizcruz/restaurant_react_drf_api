@@ -23,7 +23,7 @@ class DataTable extends Component {
         title: "Name",
         dataIndex: "name",
         key: "name",
-        // Sort by the ascii code of the first name charachter.
+        // Sort by the ascii code of the first name character.
         sorter: (a, b) => a.name.charCodeAt(0) - b.name.charCodeAt(0),
         sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
       },
@@ -64,6 +64,7 @@ class DataTable extends Component {
 
 const mapStateToProps = state => ({
   data: state.data,
+  isLoading: state.isLoading
 });
 
 export default connect(mapStateToProps)(DataTable);

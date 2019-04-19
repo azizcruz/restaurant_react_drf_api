@@ -5,28 +5,20 @@ import CustomLayout from "./containers/CustomLayout";
 import DataTable from "./components/DataTable";
 import FilterInput from "./components/FilterInput";
 import axios from "axios";
+import { connect } from "react-redux";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      isLoading: true
-    };
 
-    this.fetchData = this.fetchData.bind(this);
-  }
-
-  fetchData(filter = false, filterBy = "") {
+  fetchData = (filter = false, filterBy = "") => {
     let endpoint = "/api/dishes";
     if (filter) {
-      this.setState({ isLoading: true });
+      this.props.dispatch({type: "HANDLE_LOADING", isLoading: true});
       endpoint = `/api/dishes?filter=${filter}&name=${filterBy}`;
     }
     axios
       .get(endpoint)
       .then(res => {
-        this.setState({ data: res.data, isLoading: false });
+        this.props.dispatch({type: "ADD_DATA", fetched_data: res.data, isLoading: false})
       })
       .catch(err => {
         console.log(err);
@@ -38,15 +30,21 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <CustomLayout>
-          {/* fetchData(filter_state, filter_by) */}
-          <FilterInput onFilter={value => this.fetchData(true, value)} />
-          <DataTable data={this.state.data} isLoading={this.state.isLoading} />
-        </CustomLayout>
-      </div>
+      
+        <div className="App">
+          <CustomLayout>
+            {/* fetchData(filter_state, filter_by) */}
+            <FilterInput onFilter={value => this.fetchData(true, value)} />
+            <DataTable/>
+          </CustomLayout>
+        </div>
+      
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  data: state.data,
+  isLoading: state.isLoading
+});
+export default connect(mapStateToProps)(App);

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Table, Icon } from "antd";
+import { connect } from "react-redux";
 
 class DataTable extends Component {
   state = {
@@ -61,4 +62,8 @@ class DataTable extends Component {
   }
 }
 
-export default DataTable;
+const mapStateToProps = state => ({
+  data: state.data,
+});
+
+export default connect(mapStateToProps)(DataTable);

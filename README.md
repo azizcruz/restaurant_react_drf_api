@@ -15,7 +15,7 @@ $ source bin/activate; cd backend; python manage.py runserver .
 
 * Open a new terminal in the same directory and run
 ```shell
-$ npm start.
+$ cd frontend; npm start
 ```
 
 * Open your browser and paste http://localhost:3000/#

@@ -5,12 +5,12 @@
 * clone the repository
 
 ```shell
-$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git .
+$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git
 ```
 
 * run this command
 ```shell
-$ source bin/activate; cd backend; python manage.py runserver .
+$ source bin/activate; cd backend; python manage.py runserver
 ```
 
 * Open a new terminal in the same directory and run

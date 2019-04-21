@@ -5,7 +5,8 @@
 * clone the repository
 
 ```shell
-$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git.
+$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git .
+
 ```
 
 * run this command

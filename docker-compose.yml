@@ -4,12 +4,14 @@ services:
   frontend:
     build: ./frontend
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
     command: npm start
     ports:
       - 3000:3000
     volumes:
       - ./frontend:/frontend
+    depends_on: 
+      - backend
   backend:
     build: ./backend
     command: ["python", "manage.py", "runserver"]

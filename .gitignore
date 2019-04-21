@@ -4,9 +4,6 @@
 __pycache__
 *.pyc
 .vscode
-bin
-include
-lib
 # dependencies
 node_modules
 .pnp

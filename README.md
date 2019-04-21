@@ -5,7 +5,8 @@
 * clone the repository
 
 ```shell
-$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git
+$ git clone https://github.com/azizcruz/restaurant_react_drf_api.git .
+
 ```
 
 * run this command
@@ -15,7 +16,7 @@ $ source bin/activate; cd backend; python manage.py runserver
 
 * Open a new terminal in the same directory and run
 ```shell
-$ cd frontend; npm start
+$ cd ..; cd frontend; npm install; npm start
 ```
 
 * Open your browser and paste http://localhost:3000/#

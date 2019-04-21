@@ -12,12 +12,14 @@ class App extends Component {
   fetchData = (filter = false, filterBy = "") => {
     let endpoint = "/api/dishes";
     if (filter) {
+      // Send a dispatch to start loading.
       this.props.dispatch({type: "HANDLE_LOADING", isLoading: true});
       endpoint = `/api/dishes?filter=${filter}&name=${filterBy}`;
     }
     axios
       .get(endpoint)
       .then(res => {
+        // Send a dispatch to add the returned data to the single source of data.
         this.props.dispatch({type: "ADD_DATA", fetched_data: res.data, isLoading: false})
       })
       .catch(err => {

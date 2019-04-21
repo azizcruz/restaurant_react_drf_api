@@ -1,16 +1,15 @@
 version: '3'
 
 services:
-  frontend: 
+  frontend:
     build: ./frontend
-    command: ["npm", "start"]
-    volumes:
-      - .:/app
-    ports:
-      - "3000:3000"
     environment:
-      - NODE_ENV=development
-
+      - NODE_ENV=production
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
   backend:
     build: ./backend
     command: ["python", "manage.py", "runserver"]

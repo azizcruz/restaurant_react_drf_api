@@ -14,12 +14,10 @@ export class FilterInput extends Component {
               placeholder="Filter by name"
               onSearch={value => this.props.onFilter(value)}
               enterButton
+              style={{ marginBottom: 24 + "px" }}
             />
           </Col>
         </Row>
-
-        <br />
-        <br />
       </div>
     );
   }

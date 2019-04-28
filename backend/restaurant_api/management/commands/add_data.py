@@ -30,7 +30,7 @@ class Command(BaseCommand):
         # Read csv file.
         df = pd.read_csv(f'{file_name}.csv')
         
-        # Make airports a list generator, better for memory sufficiency.
+        # Make a list generator of dishes instances, better for memory sufficiency and faster.
         dishes = dishes_instances_genertor(df)
 
         # Used bulk_create to send a one hit to the database that will create all the instances.
